@@ -7,5 +7,5 @@ let app = express();
 app.use(express.static(publicPath));
 
 app.listen(3000, function () {
-    console.log('Example app listening on port ${port}!');
+    console.log(`Example app listening on port ${port}!`);
 });
