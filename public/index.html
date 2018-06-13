@@ -1,58 +1,31 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Join | Chatapp</title>
 </head>
-
-<body class="chat">
-
-  <div class="chat__sidebar">
-    <h3>People</h3>
-    <div id="users"></div>
-  </div>
-
-  <div class="chat__main">
-    <ol id="messages" class="chat__messages"></ol>
+<body class="centered-form">
+    <div class="centered-form__form">
+        <form action="/chat.html">
+            <div class="form-field">
+                <h3>ChatApp</h3>
+            </div>
+            <div class="form-field">
+                <label>Nombre: </label>
+                <input type="text" name="name" autofocus/>
+            </div>
+            <div class="form-field">
+                <label>Room name:</label>
+                <input type="text" name="room"/> 
+            </div>
+            <div class="form-field">
+                <button>Entrar</button>
+            </div>
+        </form>
+    </div>
     
-    <div class="chat__footer">
-      <form id="message-form">
-        <input type="text" name="message" placeholder="Mensaje" autofocus autocomplete="off"/>
-        <button>Enviar</button>
-      </form>
-      <button id="send-location">Enviar Ubicación</button>
-    </div>   
-  </div>
-
-  <script id="message-template" type="text/template">
-    <li class="message">
-      <div class="message__title">
-        <h4>{{from}}</h4>
-        <span>{{createdAt}}</span>
-      </div>
-      <div class="message__body">
-          <p>{{text}}</p>
-      </div>
-    </li>
-  </script>
-  <script id="location-message-template" type="text/template">
-    <li class="message">
-      <div class="message__title">
-        <h4>{{from}}</h4>
-        <span>{{createdAt}}</span>
-      </div>
-      <div class="message__body">
-          <a href="{{url}}" target="_blank">My location</a>
-      </div>
-    </li>
-  </script>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
-  <script src="/js/index.js"></script>
-  <script src="/js/moment.js"></script>
-  <script src="/js/mustache.js"></script>
 </body>
-
 </html>
